@@ -1,0 +1,81 @@
+#container{
+	position: relative;
+	padding: 5px;
+}
+
+#projectInput{
+	display: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.topLabel{
+	background-color: #f6766c;
+	border-radius: 5px;
+	text-align: center;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.column #topLabel{
+	align-self: flex-start;
+}
+.log{
+	max-width: 100%;
+	height: 250px;
+	margin: auto;
+	overflow-y: auto;
+	font-size: 12px;
+	display: flex;
+	align-self: center;
+	margin-bottom: 15px;
+}
+/* Clear floats after the columns */
+
+.hidden{
+	display: none;
+}
+.shown{
+	z-index: 1000;
+	position: absolute;
+	background-color: #C0C0C0;
+	border: 1px solid blue;
+	width: 100px;
+	height: 100px;
+	padding: 2px;
+	display: block;
+	margin: 0;
+	list-style-type: none;
+	list-style: none;
+}
+#myCanvas{
+	max-height: 250px;
+	max-width: 250px;
+	margin: 5px;
+	display: flex;
+	align-self: center;
+}
+.tooltip{
+	position: absolute;
+	border-style: solid;
+	border-width: 1px;
+	display: none;
+	width: 150px;
+	height: 150px;
+	font-size: 15px;
+	text-align: center;
+	
+}
+.tooltip p{
+	display: inline-block;
+}

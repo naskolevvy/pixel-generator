@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class = "content">
+		<div class = "row">
+			<div id = "userinputContainer" class = "column">
+				<label for = "userinputContainer" class = "topLabel">User Input:</label><br>
+				<input type = "file" id = "fileinput" accept = "image/*"><br>
+				<label for = "width">Width in Pixels:</label><br>
+				<input type = "number" id = "width" ><br>
+				<label for="height">Height in Pixels:</label><br>
+				<input type = "number" id = "height"><br>
+				<label for="natural">Auto Pixelate: <label>
+				<input type="checkbox" id="natural"><br>
+				<input type = "file" id = "projectInput" accept = ".project">
+			</div>
+			<div id = "userbuttons" class = "column">
+				<label for = "userbuttons" class = "topLabel">Action:</label><br>
+				<button id = "button" onClick = "pixelate()">PIXELATE</button><br>
+				<button id = "saveImage" onClick = "saveImage()">Save as Image</button><br>
+				<button id = "saveProject" onClick = "saveProject()">Save Project</button><br>
+				<button id = "openProject" onClick = "loadProject()">Load Project</button>
+			</div>
+			<div id = "canvaspreview" class = "column">
+				<label for = "myCanvas" class = "topLabel">Image Preview:</label><br>
+				<canvas id = "myCanvas" ></canvas>
+			</div>
+			<div id = "logview" class = "column">
+				<label for = "log" class = "topLabel">Log of Changes:</label><br>
+				<span id = "log" class = "log"></span>
+			</div>
+		</div>
+		<div id = "container">
+			<div id = "tooltipNew" class = "tooltip"></div>
+			<canvas id = "canvasArray" style = "
+				margin-bottom: 20px;
+			  image-rendering: -moz-crisp-edges;
+			  image-rendering: -webkit-crisp-edges;
+			  image-rendering: pixelated;
+			  image-rendering: crisp-edges;"></canvas>
+		</div>
+	</div>
+	<div class = "hidden" id="ctxMenu">
+		<a href= "javascript:void(0);" onclick = "copyColor(0)" >Copy Color</a><br>
+		<a href= "javascript:void(0);" onclick = "pasteColor(0)">Paste Color</a><br>
+		<a href= "javascript:void(0);" onclick = "setColor(0)">Set RGB</a><br>
+		<a href= "javascript:void(0);" onclick = "undoChanges(0)">Undo Changes</a>	
+	</div>
+	<script type = "text/javascript" src = "script.js"></script>
+</body>
+</html>
